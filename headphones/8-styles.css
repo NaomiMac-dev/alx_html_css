@@ -1,0 +1,570 @@
+/* Import Source Sans Pro font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo {
+  height: 30px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #FF6565;
+}
+
+/* =======================
+   Header And Hero Section
+======================== */
+
+:root {
+  --main-color: #FF6565;
+  --text-color: #ffffff;
+  --bg-color: #1f1f1f;
+  --max-width: 1000px;
+}
+
+header {
+  background: url("images/headphones_hero_1.jpg") no-repeat center center/cover;
+  padding-bottom: 100px;
+  color: var(--text-color);
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* keeps everything nicely aligned */
+  flex-wrap: wrap; /* ensures it doesn't break weird on small screens */
+  gap: 40px;
+}
+.navbar {
+  display: flex;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+
+.nav-links a:hover,
+.nav-links a:active {
+  color: var(--main-color);
+}
+
+.hero {
+  text-align: center;
+  margin-top: 100px;
+  padding: 0 20px;
+  padding-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: var(--main-color);
+  padding: 15px 30px;
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: opacity 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+
+.caption {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* small‑screen nav + hero adjustments */
+@media screen and (max-width: 480px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero h1 { font-size: 28px; }
+  .hero h2 { font-size: 18px; }
+  .btn { font-size: 14px; padding: 10px 20px; }
+}
+
+/* =======================
+   What We Do Section
+======================== */
+
+.what-we-do {
+  margin-top: 50px;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.what-we-do h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.what-we-do p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 50px;
+}
+/* Services */
+.services {
+  display: flex;
+  justify-content: space-around;  /* gives equal space on ends */
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service {
+  flex: 1 1 200px;    /* grow+shrink, base 200px */
+  max-width: 300px;   /* caps how wide each card can get */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon,
+.holberton_school-icon {
+  font-size: 60px;
+  color: #FF6565;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 14px;
+  color: #666;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* =======================
+   Our Results Section
+======================== */
+.results {
+    background-image: url("images/headphones_hero_1.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .results-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .result {
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  
+  .result-image {
+    background-image: url("images/pentagone.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .result .value {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .result .label {
+    font-size: 14px;
+    margin: 4px 0 0;
+  }
+  
+  /* =======================
+   Contacts Section
+======================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  animation: fadeIn 1s ease;
+}
+
+header {
+  text-align: center;
+  background-color: #FF6565;
+  padding: 20px;
+  color: #fff;
+  animation: slideInDown 0.7s ease-out;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-form .input-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #FF6565;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 101, 101, 0.4);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #FF6565;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e64a4a;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ /* =======================
+   Footer Section
+======================== */
+.site-footer {
+    background-color: #071629;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo {
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-icons span {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .footer-icons span:hover {
+    transform: scale(1.2);
+    color: #FF6565;
+  }
+  
+  .footer-copy {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+   /* =======================
+   Animation additions for the whole page.
+======================== */
+  
+  /* Animation keyframes */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* WHAT WE DO animations */
+.service {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.service:hover {
+  transform: scale(1.05) rotate(-1deg);
+  opacity: 0.95;
+  animation: pulse 0.8s ease-in-out;
+}
+
+/* Add bounce loop just for fun */
+.service:nth-child(odd) {
+  animation: bounce 3s infinite ease-in-out;
+}
+
+/* OUR RESULTS animations */
+.result {
+  transition: transform 0.4s ease-in-out;
+}
+
+.result:hover {
+  transform: scale(1.1) rotate(1deg);
+}
+
+/* Subtle bounce for results  */
+.result:nth-child(even) {
+  animation: bounce 4s infinite ease-in-out;
+}
+
+/* Hamburger icon styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  /* Show hamburger on small screens */
+  @media (max-width: 480px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #111;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      width: 200px;
+      padding: 1em;
+      border-radius: 8px;
+    }
+  
+    nav ul.active {
+      display: flex;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
+  
+  nav ul {
+    transition: all 0.3s ease-in-out;
+  }
+  
